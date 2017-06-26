@@ -1,0 +1,490 @@
+@import "vars";
+@import "bootstrap";
+
+/* Contents: 
+   1. Global Styles
+   2. Section
+   3 Header
+        3.1 Brand
+        3.2 Navigation
+    4. Showcase
+        4.1 Showcase Text
+        4.2 Show Case Button
+    5. Trusted
+    6. Products
+    7. Users
+    8. Join
+    9. Footer
+    10. No Gutters for Bootstrap
+    11. Media Queries
+*/
+
+/*---------- 1. Global Styles----------*/
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 9px;
+    font-family: $text-font;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: $header-font;
+}
+
+p {
+    font-weight: 300;
+    line-height: 27px;
+}
+
+hr {
+    color: $text-color;
+    opacity: 0.2;
+}
+
+.section-header {
+    color: $clay;
+}
+
+/*----------2. Section---------*/
+#section-one {
+    min-height: 100vh;
+    background: linear-gradient(rgba(33, 41, 48, 0.9), rgba(33, 41, 48, 0.9)), url("../images/1.jpg");
+    background-size: cover;
+}
+
+/*----------3 Header----------*/
+header {
+    margin-top: 50px;
+}
+
+
+/*----------3.1 Brand----------*/
+.brand {
+    color: $white;
+    h1 {
+        margin: 0;
+        font-size: 4em;
+        font-weight: 600;
+    }
+
+}
+
+
+/*----------3.2 Navigation----------*/
+.navigation {
+    font-family: $text-font;
+    font-weight: 300;
+    font-size: 2em;
+
+    li {
+        margin-left: 20px;
+        a {
+            color: $white;
+            transition: color 0.5s ease-in-out;
+
+            &:hover {
+                color: $tradewind;
+                text-decoration: none;
+            }
+            &:active {
+                text-decoration: none;
+            }
+        }
+
+        .login-btn {
+                padding: 2px 25px 5px 25px;
+                font-weight: 600;
+                border: 2px solid $tradewind;
+                border-radius: 5px;
+            }
+    }
+}
+
+.mobile-nav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background: $clay;
+        overflow-x: hidden;
+        padding-top: 60px;
+        transition: width 0.3s ease-in;
+        box-shadow: -3px 0px 10px #000;
+
+        a {
+            padding: 8px 8px 8px 32px;
+            text-align: left;
+            text-decoration: none;
+            font-size: 3em;
+            color: $text-color;
+            display: block;
+        }
+    }
+
+#mobile-nav-open {
+    color: $tradewind;
+}
+
+#mobile-nav-close {
+    color: $tradewind;
+}
+
+/*----------4 Showcase----------*/
+#showcase {
+    margin-top: 125px;
+    color: $white;
+    display: none;
+}
+
+/*----------4.1 Showcase Text----------*/
+.showcase-header {
+    padding-bottom: 40px;
+    font-size: 6.6em;
+}
+
+.showcase-sub-heading {
+    font-size: 2em;
+    padding-bottom: 50px;
+}
+
+/*----------4.2 Showcase Button----------*/
+.signin-btn {
+    padding: 15px 50px 15px 50px;
+    font-size: 2.6em;
+    font-weight: 600;
+    color: $white;
+    background: $tradewind;
+    border-radius: 3px;
+    box-shadow: 1px 3px 5px rgba(136, 136, 136, .2);
+    transition: box-shadow 0.5s ease;
+
+    &:hover {
+        text-decoration: none;
+        color: $white;
+        box-shadow: 1px 3px 5px rgba(136, 136, 136, .4);
+        
+    }
+}
+
+.btn-lead-text {
+    margin-top: 40px;
+    font-size: 2em;
+}
+
+
+/*---------- 5. Trusted----------*/
+
+#trusted {
+
+    h6 {
+        display: inline-block;
+    }
+    img{
+        display: inline;
+        padding-left: 15px;
+        padding-top: 15px;
+        padding-bottom: 20px;       
+        text-align: center;
+        width: 120px;
+    }
+}
+
+
+/*---------- 6. Products----------*/
+#product-features {
+    padding-top: 50px;
+
+    h1 {
+        padding-bottom: 10px;
+        font-size: 4em;
+        
+
+    }
+
+    p {
+        padding-top:20px; 
+        font-size: 2em;
+        line-height: 27px;
+    }
+}
+
+.separator {
+    width: 40px;
+    height: 5px;
+    background: $tradewind;
+    border-radius: 8px;
+}
+
+.more-btn {
+    margin-top: 40px;
+    font-size: 2em;
+    font-weight: 600;
+    color: $tradewind;
+    transition: color 0.5s ease-in-out;
+
+    &:hover {
+        color: $clay;
+        text-decoration: none;
+    }
+    &:active {
+        text-decoration: none;
+    }
+
+    .fa {
+        padding-left: 5px;
+        color: $text-color;
+        
+    }
+}
+
+#product-description {
+    margin-top: 120px;
+}
+
+.description {
+    height: 300px;
+    background: $tradewind;
+}
+
+
+.description-content {
+    padding: 20px;
+    margin: 0;
+    color: $white;
+}
+
+.desc-sub-header {
+    font-size: 2.6em;
+    font-weight: 600;
+}
+
+.desc-img {
+    height: 300px;
+    background-image: url("../images/2.jpg") ;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.desc-text {
+    padding-bottom: 10px;
+    line-height: 1.7em;
+    font-size: 1.5em;
+
+}
+
+/*---------- 7. Users----------*/
+#users {
+    margin-top: 60px;
+}
+
+.user {
+    margin-top: 40px;
+}
+
+.user:nth-child(even) {
+    margin-top: 100px;
+}
+.user-name {
+    font-size: 3.3em;
+    color: $clay;
+}
+
+.user-title {
+    font-size: 2em;
+    color: $clay;
+}
+
+.user-quote {
+    line-height: 1.7em;
+    font-size: 1.5em;
+
+}
+
+/*---------- 8. Join----------*/
+#join {
+    height: 250px;
+    margin-top: 60px;
+    background-image: linear-gradient(rgba(76, 96, 144, 0.6), rgba(76, 96, 144, 0.6)), url("../images/3.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+
+    h2 {
+        margin-top: 40px;
+        color: $white;
+    }
+}
+
+.join-input {
+    margin-top:20px;
+    max-width: 100%;
+    background-image: linear-gradient(rgba(219, 219, 219, 0.2), rgba(219, 219, 219, 0.2));
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px 5px 10px 5px;
+    
+    input {
+        font-size: 1.8em;
+        padding-left: 15px;
+        background: transparent;
+        border: none;
+        color: $white;
+        
+    }
+
+    input::placeholder{
+        font-family: $header-font;
+        font-weight: 300;
+        color: $white;
+    }
+
+    button {
+        height: 35px;
+        width: 120px;
+        font-size: 1.5em;
+        font-weight: 600;
+        color: $white;
+        border: none;
+        border-radius: 3px;
+        background: $tradewind;
+    }
+}
+
+/*---------- 9. Footer----------*/
+
+footer {
+    padding: 50px;
+    background: $clay;
+
+    ul {
+        li {
+            padding-top: 5px;
+            a {
+                font-size: 1.5em;
+                color: $text-color;
+                transition: color 0.5s ease-in-out;
+
+                &:hover {
+                    text-decoration: none;
+                    color: $tradewind;
+                }
+            }
+        }
+    }
+}
+
+.social-links {
+    li {
+        a {
+            color: $white;
+        }
+    }
+}
+
+.address {
+    font-size: 1.5em;
+    color: $white;
+    text-align: right;
+}
+
+/*---------- 10. No Gutters for Bootstrap----------*/
+
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/*----------11. Media Queries----------*/
+
+
+@media (max-width: $screen-sm-min) { 
+
+    /*---------- Navigation----------*/
+    .navigation {
+        display: none;
+    }
+
+    #mobile-nav-open {
+        display: block;
+    }
+
+    /*----------Showcase----------*/
+    #showcase {
+        margin-top: 50px;
+        }
+    .showcase-header {
+        padding-bottom: 20px;
+        }
+
+    /*----------Trusted----------*/
+
+    #trusted {
+        display: none;
+    }
+
+    /*----------Product Description----------*/
+    /*.description {
+        height: 100%;
+    }*/
+    .description-content {
+        h1 {
+            padding-top: 10px;
+            margin: 0;
+        }
+        
+    }
+
+    .desc-text {
+        font-size: 1.5em;
+
+    }
+
+    /*---------- Users----------*/
+    .user:nth-child(even) {
+        margin-top: 40px;
+    }
+
+    /*---------- Join----------*/
+    .join-input {
+        min-width: 100%;
+        button {
+            display: block;
+            margin-top: 15px;
+            margin-left: 30%;
+        }
+    }
+
+    /*---------- Footer----------*/
+    .address {
+        text-align: center;
+    }
+
+ }
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) { 
+    /*---------- Navigation (Mobile)----------*/
+    #mobile-nav-open {
+        display: none;
+    }
+ }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+
+ }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) {
+    .container {
+        width: 960px;
+    }
+ }
